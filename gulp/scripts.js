@@ -1,11 +1,12 @@
 'use strict';
 
-var gulp = require('gulp');
+var gulp 		= require('gulp');
+var logger 		= require('./logger')();
 
 module.exports = function(app) {
 
 	gulp.task('js', function(){
-		console.log('js');
+		logger.info('js task');
 	});
 
 }

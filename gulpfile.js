@@ -6,7 +6,6 @@
 'use strict';
 
 var gulp        = require('gulp');
-var logger 		= require('./gulp/logger')();
 var wrench 		= require('wrench');
 
 var appRoot = 'app';
@@ -18,24 +17,23 @@ var app = {
 
 	// paths for all types of files
 	paths: {
+		
 		// files used in watch task
 		watch: {
 			less: appRoot + '/**/*.less',
 			html: appRoot +'/**/*.html',
 			js: appRoot + '/**/*.js'
 		},
+
 		// less files used in less task. 
 		less: {
-			// We use only one file which have all imports
+			// We use only one file which contains all imports
 			src: appRoot + '/styles/less/main.less',
 			// directory for main.css file
 			dest: appRoot + '/styles'
 		},
 		
 	},
-
-	// register logger
-	logger: logger
 
 }
 
